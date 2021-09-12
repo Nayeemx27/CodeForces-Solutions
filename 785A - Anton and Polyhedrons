@@ -1,0 +1,39 @@
+#include<iostream>
+using namespace std;
+ 
+int main()
+{
+    int x, total=0;
+    cin>>x;
+    string arr [x];
+ 
+    for (int i=0; i<x; i++) {
+ 
+        cin>>arr[i];
+ 
+        if (arr[i]=="Tetrahedron")
+        {
+            total +=4;
+        }
+        else if (arr[i]=="Cube")
+        {
+            total +=6;
+        }
+        else if (arr[i]=="Octahedron")
+        {
+            total +=8;
+        }
+        else if (arr[i]=="Dodecahedron")
+        {
+            total +=12;
+        }
+        else if (arr[i]=="Icosahedron")
+        {
+            total +=20;
+        }
+ 
+        }
+    cout<<total<<endl;
+ 
+    return 0;
+}
