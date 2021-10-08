@@ -1,0 +1,25 @@
+#include <iostream>
+#include <algorithm>
+
+using namespace std;
+
+int main()
+{
+    int n, x, z;
+    cin>>n>>x;
+    int ar[n];
+
+    for (int i=0; i<n; i++)
+        cin>>ar[i];
+
+    sort(ar, ar+n);
+    z=max(ar[0], x-ar[n - 1]) * 2;
+
+    for (int i=0; i<n-1; i++)
+        z = max(z, ar[i+1]-ar[i]);
+
+    cout.precision(10);
+    cout<<fixed<<z/2.0<<endl;
+
+    return 0;
+}
